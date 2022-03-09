@@ -12,14 +12,14 @@
 
 int main(int argc, char *argv[]){
 	
-	char environ[2][BUFFER] = {0};
+	char shell[2][BUFFER] = {0};
 	char cur[BUFFER] = {0};
 	char myshell[BUFFER] = {0};
 	char buffer[BUFFER] = {0};
 	char command[BUFFER] = {0};
 	char tokens[TOKENS][BUFFER] = {0};
 	int t_count = 0;
-	int command = 0;
+	int track = 0;
 	
 	FILE* file = NULL;
 	
@@ -36,10 +36,10 @@ int main(int argc, char *argv[]){
 	
 	printf("Welcome!\n");
 	
-	strcpy(environ[0], "dir: ");
-	strcpy(environ[0], cur);
-	strcpy(environ[1], "myshell: ");
-	strcpy(environ[1], myshell);
+	strcpy(shell[0], "dir: ");
+	strcpy(shell[0], cur);
+	strcpy(shell[1], "myshell: ");
+	strcpy(shell[1], myshell);
 	
 	printf("%s--> ", cur);
 	
@@ -55,29 +55,36 @@ int main(int argc, char *argv[]){
 		strcpy(command, tokens[0]);
 		
 		if (strcmp(command, "cd") == 0){
-			command = 1;
-		
-			cd_command(cur, tokens[1]);
-			strcpy(environ[0], "dir: ");
-			strcat(environ[0], pwd);
+			track = 1;
 			}
 			
 		else if (strcmp(command, "clr") == 0){
-			command = 2;
-			clear();
+			track = 2;
 			}
 		
 		else if (strcmp(command, "dir") == 0){
-			command = 3;
-			list_contents(tokens[1]);
-			printf("\n");
+			track = 3;
+			
 			}
 			
-		switch(command)
+		switch(track)
 		{
-		case
+		case 1:
+			cd_command(cur, tokens[1]);
+			strcpy(shell[0], "dir: ");
+			strcat(shell[0], cur);
+			break;
+		case 2:
+			clear();
+			break;
+		case 3:
+			list_contents(tokens[1]);
+			printf("\n");
+			break;	
+			
 		}
-	}				
+	}
+}				
 			
 	
 	
