@@ -50,8 +50,8 @@ extern void clear(void){
 	printf("myshell-->");
 }
 
-extern void environ(void){
-	
+extern void environ(char shell[][BUFFER]){
+	printf("%s\n%s\n", env[0], env[1]);
 }
 
 extern void display_help(void){
