@@ -81,6 +81,9 @@ int main(int argc, char *argv[]){
 			track = 6;
 		
 			}
+		else if(strcmp(command, "quit") == 0){
+			track = 7;
+			}
 			
 		switch(track)
 		{
@@ -103,6 +106,8 @@ int main(int argc, char *argv[]){
 		case 6:
 			display_help();
 			break;
+		case 7:
+			quick_exit(0);
 			
 		}
 	}
