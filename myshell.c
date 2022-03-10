@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
 	
 	printf("Welcome!\n");
 	
-	strcpy(shell[0], "dir: ");
+	strcpy(shell[0], "CUR: ");
 	strcpy(shell[0], cur);
 	strcpy(shell[1], "myshell: ");
 	strcpy(shell[1], myshell);
@@ -86,7 +86,7 @@ int main(int argc, char *argv[]){
 		{
 		case 1:
 			cd_command(cur, tokens[1]);
-			strcpy(shell[0], "dir: ");
+			strcpy(shell[0], "CUR: ");
 			strcat(shell[0], cur);
 			break;
 		case 2:
@@ -109,6 +109,3 @@ int main(int argc, char *argv[]){
 }				
 			
 	
-	
-	
-

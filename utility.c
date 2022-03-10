@@ -28,12 +28,14 @@ extern void list_contents(char* path){
 		}
 		closedir(d);
 	}
+	printf("-->");
 }
 	
 extern void cd_command(char* cur, char* path){
-	int c = chdir(path);
+	int check = chdir(path);
 	if (strcmp(path,"") != 0){
-		if (c == 0){
+		if (check == 0){
+			chdir(path);
 			list_contents(cur);
 		}
 		else {
@@ -44,6 +46,7 @@ extern void cd_command(char* cur, char* path){
 
 extern void clear(void){
 	printf("\e[1;1H\e[2J");
+	printf("-->");
 }
 
 extern void environ(void){
@@ -61,4 +64,3 @@ extern void display_help(void){
     	printf("pause\t\t\t Pauses operation of the shell until the ENTER key is hit.\n");
     	printf("quit\t\t\t Quits the shell.\n\n\n");
 }
-
