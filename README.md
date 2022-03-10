@@ -11,10 +11,17 @@ Kevin Erskine(100762922)
 
 ### Commands
 dir:
+
 cd:
+
 clr:
+
 quit:
+
 environ:
-echo: 
+
+echo:
+
 help:
+
 pause:
