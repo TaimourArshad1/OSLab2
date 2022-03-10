@@ -7,11 +7,15 @@
 #include "utility.h"
 #include "myshell.h"
 
+//Initialize Global Variables
+//BUFFER holds the buffer 
 #define BUFFER 1024
+//Tokens holds the parsed input from the user
 #define TOKENS 10
 
 int main(int argc, char *argv[]){
 	
+	//Variables are intialized
 	char shell[2][BUFFER] = {0};
 	char cur[BUFFER] = {0};
 	char myshell[BUFFER] = {0};
@@ -21,13 +25,16 @@ int main(int argc, char *argv[]){
 	int t_count = 0;
 	int track = 0;
 	
+	//File is created and set to null
 	FILE* file = NULL;
 	
+	//Checks if file opens correctly
 	if (file == NULL && argc > 1){
 	printf("Error opening file");
 	return 0;
 	}
 	
+	//Opens file, uses user input for parsing
 	if (argc > 1){
 	file = fopen(argv[1], "r");
 	}else{
@@ -43,8 +50,10 @@ int main(int argc, char *argv[]){
 	
 	printf("%s-myshell-> ", cur);
 	
+	//Loop runs as long as file, BUFFER, and buffer and not null
 	while (fgets(buffer, BUFFER, file) != NULL){
 		
+		//Input is parsed using tokens
 		int index = 0;
 		while (buffer[index] != '\n'){
 			index++;
@@ -54,6 +63,8 @@ int main(int argc, char *argv[]){
 		t_count = parse(buffer, tokens);
 		strcpy(command, tokens[0]);
 		
+		//if/else tree that compares the user input with available commands
+		//track variable is set to the appropriate number that corresponds with the command
 		if (strcmp(command, "cd") == 0){
 			track = 1;
 			}
@@ -88,17 +99,21 @@ int main(int argc, char *argv[]){
 			track = 8;
 			}
 			
+		//track variable is used to called functions to perform on the shell
 		switch(track)
 		{
 		case 1:
+			//cd_command() is called with the present directory and the directory requested by the user	
 			cd_command(cur, tokens[1]);
 			strcpy(shell[0], "CUR: ");
 			strcat(shell[0], cur);
 			break;
 		case 2:
+			//clear() is called to clear the shell	
 			clear();
 			break;
 		case 3:
+			//list_contents is called to display all the contents of the shell	
 			list_contents(tokens[1]);
 			printf("\n");
 			break;	
@@ -116,6 +131,7 @@ int main(int argc, char *argv[]){
 			display_help();
 			break;
 		case 7:
+			//quick_exit() is used to exit the shell	
 			quick_exit(0);
 	
 		case 8:
