@@ -16,7 +16,7 @@ cd: Used to change to desired directory specified from the user
 
 clr: Used to completely clear the screen
 
-quit:
+quit: Used exit the shell and return to terminal
 
 environ:
 
