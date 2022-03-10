@@ -103,7 +103,7 @@ int main(int argc, char *argv[]){
 			printf("\n");
 			break;	
 		case 4:
-			printf("%s> ", pwd);
+			printf("%s> ", cur);
 			for (int i = 1; i < token_count; i++){
 				printf("%s ", tokens[i]);
 			}
