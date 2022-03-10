@@ -7,38 +7,53 @@
 #include "utility.h"
 
 extern int parse(char* str, char tokens[][BUFFER]){
-	const char delimiter[2] = " ";
+	//del holds the blank space
+	const char del[2] = " ";
 	int t_count = 0;
-	char* token = strtok(str, delimiter);
+	//ignore the blanks and token holds all the other words using strtok()
+	char* token = strtok(str, del);
+	//Runs while token is not empty
 	while (token != NULL){
+		//Puts the token at the appropriate index of tokens[]
 		strcpy(tokens[t_count], token);
-		token = strtok(NULL, delimiter);
+		token = strtok(NULL, del);
 		}
 		return t_count;
 }
 
 extern void list_contents(char* path){
+	
 	struct dirent *dir;
 	DIR *d = NULL;
-	
+	//Opens the appropriate directory and returns true or false 
 	d = opendir(".");
+	//d is true
 	if (d) {
+		//runs while the dir is not empty
 		while ((dir = readdir(d)) != NULL) {
+			//prints teh contents od teh directory using the struct variable
 			printf("%s\n", dir->d_name);
 		}
+		//closes directory
 		closedir(d);
 	}
 	printf("myshell-->");
 }
 	
 extern void cd_command(char* cur, char* path){
+	//chdir result is stored in check variable
 	int check = chdir(path);
+	//checks if the path provided is not blank
 	if (strcmp(path,"") != 0){
+		//chdir result is succesfull
 		if (check == 0){
+			//directory is changed with the path provided by the user
 			chdir(path);
+			//list_contents() is called to display the contents of the chaned directory
 			list_contents(cur);
 		}
 		else {
+			//Prints if the path provided by the user does not exist
 			printf("%s> No Path Exists\n"	, cur);
 		}
 	}
@@ -46,6 +61,7 @@ extern void cd_command(char* cur, char* path){
 }
 
 extern void clear(void){
+	//Printf statement that clears the entire screen
 	printf("\e[1;1H\e[2J");
 	printf("myshell-->");
 }
