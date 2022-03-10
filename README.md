@@ -5,7 +5,7 @@ Taimour Arshad() - Reponsible for: environ, help, echo
 
 Gutu Shiferaw() - Reponsible for: 
 
-Zain Butt () - Reponsible for: pause
+Zain Butt (100751676) - Reponsible for: pause
 
 Kevin Erskine(100762922) - Reponsible for: dir, cd, clr, quit, parser, 
 
@@ -26,4 +26,4 @@ echo:
 
 help:
 
-pause:
+pause: responsible for pausing the shell
