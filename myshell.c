@@ -66,6 +66,21 @@ int main(int argc, char *argv[]){
 			track = 3;
 			
 			}
+		
+		else if (strcmp(command, "echo") == 0){
+			track = 4;
+			
+			}
+		
+		else if (strcmp(command, "environ") == 0){
+			track = 5;
+			
+			}
+		
+		else if (strcmp(command, "help") == 0){
+			track = 6;
+		
+			}
 			
 		switch(track)
 		{
@@ -81,6 +96,13 @@ int main(int argc, char *argv[]){
 			list_contents(tokens[1]);
 			printf("\n");
 			break;	
+		case 4:
+			break;	
+		case 5:
+			break;	
+		case 6:
+			display_help();
+			break;
 			
 		}
 	}
