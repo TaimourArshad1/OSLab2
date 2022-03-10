@@ -28,7 +28,7 @@ extern void list_contents(char* path){
 		}
 		closedir(d);
 	}
-	printf("-->");
+	printf("myshell-->");
 }
 	
 extern void cd_command(char* cur, char* path){
@@ -42,11 +42,12 @@ extern void cd_command(char* cur, char* path){
 			printf("%s> No Path Exists\n"	, cur);
 		}
 	}
+	printf("myshell-->");
 }
 
 extern void clear(void){
 	printf("\e[1;1H\e[2J");
-	printf("-->");
+	printf("myshell-->");
 }
 
 extern void environ(void){
