@@ -10,11 +10,11 @@ Kevin Erskine(100762922)
 ### Description
 
 ### Commands
-dir:
+dir: Used to list contents of directory
 
-cd:
+cd: Used to change to desired directory specified from the user
 
-clr:
+clr: Used to completely clear the screen
 
 quit:
 
