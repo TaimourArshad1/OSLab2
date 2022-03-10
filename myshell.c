@@ -74,12 +74,10 @@ int main(int argc, char *argv[]){
 		
 		else if (strcmp(command, "environ") == 0){
 			track = 5;
-			
 			}
 		
 		else if (strcmp(command, "help") == 0){
 			track = 6;
-		
 			}
 		
 		else if(strcmp(command, "quit") == 0){
@@ -105,6 +103,11 @@ int main(int argc, char *argv[]){
 			printf("\n");
 			break;	
 		case 4:
+			printf("%s> ", pwd);
+			for (int i = 1; i < token_count; i++){
+				printf("%s ", tokens[i]);
+			}
+			printf("\n");	
 			break;	
 		case 5:
 			break;	
