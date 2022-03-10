@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
 	strcpy(shell[1], "myshell: ");
 	strcpy(shell[1], myshell);
 	
-	printf("%s--> ", cur);
+	printf("%s-myshell-> ", cur);
 	
 	while (fgets(buffer, BUFFER, file) != NULL){
 		
