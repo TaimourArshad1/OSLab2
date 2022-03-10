@@ -12,13 +12,13 @@ Kevin Erskine(100762922)
 ### Description
 
 ### Commands
-dir: Used to list contents of directory
+dir: lists contents of directory
 
-cd: Used to change to desired directory specified from the user
+cd: Changes to desired directory specified from the user
 
-clr: Used to completely clear the screen
+clr: Completely clears the screen
 
-quit: Used exit the shell and return to terminal
+quit: Exits the shell and returns to terminal
 
 environ:
 
