@@ -11,5 +11,9 @@ extern void cd_command(char* cur, char* path);
 
 extern void clear(void);
 
+extern void environ(void);
+
+extern void display_help(void);
+
 #endif
 
