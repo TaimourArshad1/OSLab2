@@ -110,6 +110,7 @@ int main(int argc, char *argv[]){
 			printf("\n");	
 			break;	
 		case 5:
+			environ(environ);
 			break;	
 		case 6:
 			display_help();
