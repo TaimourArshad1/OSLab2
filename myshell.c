@@ -98,6 +98,10 @@ int main(int argc, char *argv[]){
 		else if(strcmp(command, "pause") == 0){
 			track = 8;
 			}
+		else{
+			printf("Invalid Command!");
+			printf("myshell-->");
+		}
 			
 		//track variable is used to called functions to perform on the shell
 		switch(track)
