@@ -20,10 +20,10 @@ clr: Completely clears the screen
 
 quit: Exits the shell and returns to terminal
 
-environ:
+environ: List all environment strings
 
-echo:
+echo: Use to echo comment onto display
 
-help:
+help: Display user manual
 
-pause: responsible for pausing the shell
+pause: Responsible for pausing the shell
