@@ -20,9 +20,7 @@ extern int parse(char* str, char tokens[][BUFFER]){
 		}
 		return t_count;
 }
-   extern void echo(char *x){
-	   system(x);
-   }
+
 extern void list_contents(char* path){
 	
 	struct dirent *dir;
