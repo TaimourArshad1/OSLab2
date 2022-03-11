@@ -68,9 +68,10 @@ extern void clear(void){
 
 extern void environ(char shell[][BUFFER]){
 	printf("%s\n%s\n", env[0], env[1]);
+	printf("myshell-->");
 }
 
-extern void display_help(void){
+extern void help(void){
 	printf("\nList of available commands:\n\n");
     	printf("help: Lists the help menu.\n");
     	printf("dir <directory>: Lists the contents of the directory\n");
@@ -80,10 +81,11 @@ extern void display_help(void){
     	printf("clr: Clears screen.\n");
     	printf("pause: Pauses operation of the shell until ENTER key is hit.\n");
     	printf("quitQuits the shell.\n\n\n");
+	printf("myshell-->");
 }
 
 extern void pause_shell(void){
-    printf("\n\nShell has come to a halt. To continue, hit the ENTER key.....\n\n");
+    printf("\n\nShell is paused. To continue, hit the ENTER key.....\n\n");
     char code = (char)getchar();
     while (code != '\n'){
         code = (char)getchar();
