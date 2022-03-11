@@ -122,6 +122,7 @@ int main(int argc, char *argv[]){
 			printf("\n");
 			break;	
 		case 4:
+			//echos comment onto display
 			printf("%s> ", cur);
 			for (int i = 1; i < token_count; i++){
 				printf("%s ", tokens[i]);
@@ -129,16 +130,20 @@ int main(int argc, char *argv[]){
 			printf("\n");	
 			break;	
 		case 5:
+			//lists all environment variables
 			environ(environ);
 			break;	
 		case 6:
+			//display list of commands available to use
 			help();
 			break;
 		case 7:
+			//quits shell
 			//quick_exit() is used to exit the shell	
 			quick_exit(0);
 	
 		case 8:
+			//pauses shell
 			pause_shell();
 			break;
 		}
