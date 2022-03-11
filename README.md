@@ -9,7 +9,6 @@ Zain Butt (100751676) - Reponsible for: pause
 
 Kevin Erskine(100762922) - Reponsible for: dir, cd, clr, quit, parser, 
 
-### Description
 
 ### Commands
 dir: lists contents of directory
