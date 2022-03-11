@@ -132,7 +132,7 @@ int main(int argc, char *argv[]){
 			environ(environ);
 			break;	
 		case 6:
-			display_help();
+			help();
 			break;
 		case 7:
 			//quick_exit() is used to exit the shell	
