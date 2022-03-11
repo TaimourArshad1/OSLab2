@@ -66,10 +66,12 @@ extern void clear(void){
 	printf("myshell-->");
 }
 
-extern void environ(char shell[][BUFFER]){
+extern void environ(void){
 	//Printf statement that lists all environment variables using env
-	printf("%s\n%s\n", env[0], env[1]);
-	printf("myshell-->");
+	printf("LOGNAME : USERNAME ");
+	printf("HOME=/home/USERNAME"); 
+	printf("
+	       
 }
 
 extern void help(void){
