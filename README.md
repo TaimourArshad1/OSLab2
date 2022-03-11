@@ -3,7 +3,7 @@
 ### Group Members: 
 Taimour Arshad() - Reponsible for: environ, help, echo
 
-Gutu Shiferaw(100767090) - Reponsible for: echo
+Gutu Shiferaw(100767090) - Reponsible for: echo command, environ command,
 
 Zain Butt (100751676) - Reponsible for: pause
 
