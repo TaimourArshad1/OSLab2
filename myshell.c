@@ -124,8 +124,10 @@ int main(int argc, char *argv[]){
 		case 4:
 			//echos comment onto display
 			printf("%s> ", cur);
-			for (int i = 1; i < token_count; i++){
-				printf("%s ", tokens[i]);
+			char comment;
+			//Loops asks user for comment and checks if there is space
+			while((comment=getchar())!='\n'){
+				putchar(comment);
 			}
 			printf("\n");	
 			break;	
