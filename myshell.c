@@ -131,7 +131,7 @@ int main(int argc, char *argv[]){
 			break;	
 		case 5:
 			//lists all environment variables
-			environ(environ);
+			environ(shell);
 			break;	
 		case 6:
 			//display list of commands available to use
