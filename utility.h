@@ -15,5 +15,7 @@ extern void environ(void);
 
 extern void display_help(void);
 
+extern void echo(char* x);
+
 #endif
 
