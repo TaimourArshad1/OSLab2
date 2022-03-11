@@ -72,6 +72,7 @@ extern void environ(char shell[][BUFFER]){
 }
 
 extern void help(void){
+	//Prints all available commands to display
 	printf("\nList of available commands:\n\n");
     	printf("help: Lists the help menu.\n");
     	printf("dir <directory>: Lists the contents of the directory\n");
@@ -85,9 +86,10 @@ extern void help(void){
 }
 
 extern void pause_shell(void){
-    printf("\n\nShell is paused. To continue, hit the ENTER key.....\n\n");
-    char code = (char)getchar();
-    while (code != '\n'){
-        code = (char)getchar();
-    }
+	//Prints shell is paused.
+	printf("\n\nShell is paused. To continue, hit the ENTER key.....\n\n");
+    	char paused = (char)getchar();
+    	while (paused != '\n'){
+        	paused = (char)getchar();
+    	}
 }
