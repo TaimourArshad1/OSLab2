@@ -139,6 +139,7 @@ int main(int argc, char *argv[]){
 			quick_exit(0);
 	
 		case 8:
+			pause_shell();
 			break;
 		}
 	}
