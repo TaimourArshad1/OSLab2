@@ -73,11 +73,12 @@ extern void environ(void){
 	printf("PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\n");
 	printf("PWD=/home/Desktop\n");
 	printf("LANGUAGE=en_CA:en");
-	printf("DESKTOP_SESSION=ubuntu");
+	printf("DESKTOP_SESSION=ubuntu\n");
+	printf("myshell-->");
 	       
 }
 
-extern void help(void){
+extern void display_help(void){
 	//Prints all available commands to display
 	printf("\nList of available commands:\n\n");
     	printf("help: Lists the help menu.\n");

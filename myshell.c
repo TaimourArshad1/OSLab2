@@ -99,7 +99,7 @@ int main(int argc, char *argv[]){
 			track = 8;
 			}
 		else{
-			printf("Invalid Command!");
+			printf("Invalid Command!\n");
 			printf("myshell-->");
 		}
 			
@@ -133,11 +133,11 @@ int main(int argc, char *argv[]){
 			break;	
 		case 5:
 			//lists all environment variables
-			environ(shell);
+			environ();
 			break;	
 		case 6:
 			//display list of commands available to use
-			help();
+			display_help();
 			break;
 		case 7:
 			//quits shell
@@ -150,6 +150,4 @@ int main(int argc, char *argv[]){
 			break;
 		}
 	}
-}				
-			
-	
+}		
