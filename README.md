@@ -1,13 +1,13 @@
 # OSLab2
 
 ### Group Members: 
-Taimour Arshad() - Reponsible for: environ, help, echo
+Taimour Arshad() - Reponsible for: environ, help, echo, readme
 
 Gutu Shiferaw(100767090) - Reponsible for: echo command, environ command,
 
 Zain Butt (100751676) - Reponsible for: pause
 
-Kevin Erskine(100762922) - Reponsible for: dir, cd, clr, quit, parser
+Kevin Erskine(100762922) - Reponsible for: dir, cd, clr, quit, parser, readme
 
 
 ### Commands
