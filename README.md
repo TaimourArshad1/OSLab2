@@ -1,5 +1,8 @@
 # OSLab2
 
+## To run: gcc -Wall myshell.c utility.c
+## Then: ./a.out
+
 ### Group Members: 
 Taimour Arshad() - Reponsible for: environ, help, echo, readme
 
